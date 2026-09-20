@@ -1,94 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lauren Douglass | CEO Coach</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<title>Lauren Douglass | CEO Coach</title>
+<meta name="description" content="Lauren Douglass — CEO Coach focused on leadership, strategy, growth, and building high-performing organizations.">
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7f9;
-            color: #24323a;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+<style>
+:root {
+    --navy: #101a22;
+    --navy-light: #182731;
+    --cream: #f5f1e9;
+    --gold: #c5a46d;
+    --white: #ffffff;
+    --muted: #aeb8bd;
+}
 
-        .content {
-            max-width: 750px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        h1 {
-            font-size: 56px;
-            margin: 0 0 15px;
-            color: #173b4c;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .tagline {
-            font-size: 22px;
-            color: #55717d;
-            margin-bottom: 35px;
-        }
+body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+}
 
-        .line {
-            width: 60px;
-            height: 4px;
-            background: #2c7b79;
-            margin: 0 auto 35px;
-            border-radius: 3px;
-        }
+/* HEADER */
 
-        p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #53636a;
-        }
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
 
-        .location {
-            margin-top: 35px;
-            font-size: 15px;
-            color: #84939a;
-        }
-    </style>
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    letter-spacing: .03em;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 130px 8% 90px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border: 1px solid rgba(197,164,109,.16);
+    border-radius: 50%;
+    right: -250px;
+    top: -150px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(197,164,109,.1);
+    border-radius: 50%;
+    right: 50px;
+    bottom: -250px;
+}
+
+.hero-content {
+    max-width: 940px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(62px, 9vw, 120px);
+    font-weight: 500;
+    line-height: .93;
+    letter-spacing: -.04em;
+    margin: 0;
+}
+
+h1 span {
+    display: block;
+    color: var(--gold);
+    font-style: italic;
+}
+
+.intro {
+    max-width: 650px;
+    margin-top: 38px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #d4dade;
+}
+
+.actions {
+    margin-top: 42px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid var(--gold);
+    color: var(--navy);
+    background: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .04em;
+    transition: .25s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: #d4b67e;
+}
+
+.button.secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255,255,255,.3);
+}
+
+/* FOCUS SECTION */
+
+.focus {
+    background: var(--cream);
+    color: var(--navy);
+    padding: 90px 8%;
+}
+
+.focus-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-label {
+    color: #927344;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 600;
+}
+
+.focus h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 500;
+    margin: 14px 0 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #d8d0c4;
+}
+
+.item {
+    padding: 32px 35px 20px 0;
+}
+
+.item + .item {
+    border-left: 1px solid #d8d0c4;
+    padding-left: 35px;
+}
+
+.number {
+    color: #a88a59;
+    font-size: 13px;
+}
+
+.item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 15px 0 12px;
+}
+
+.item p {
+    color: #667078;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+    header {
+        padding: 24px;
+    }
+
+    header > a {
+        display: none;
+    }
+
+    .hero {
+        padding: 130px 25px 70px;
+    }
+
+    h1 {
+        font-size: 62px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item,
+    .item + .item {
+        border-left: none;
+        border-bottom: 1px solid #d8d0c4;
+        padding: 28px 0;
+    }
+
+    .focus {
+        padding: 65px 25px;
+    }
+
+    footer {
+        padding: 30px 25px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero">
-    <div class="content">
+<header>
+    <div class="logo">Lauren <span>Douglass</span></div>
+    <a href="#focus">Executive Coaching</a>
+</header>
 
-        <h1>Lauren Douglass</h1>
+<section class="hero">
 
-        <div class="tagline">
-            CEO Coach · Leadership · Business Strategy
-        </div>
+    <div class="hero-content">
 
-        <div class="line"></div>
+        <div class="eyebrow">CEO Coach · Leadership · Strategy</div>
 
-        <p>
-            CEO coach focused on helping business leaders strengthen
-            leadership, build high-performing teams, and create
-            organizations positioned for long-term growth.
+        <h1>
+            Lauren
+            <span>Douglass</span>
+        </h1>
+
+        <p class="intro">
+            Helping CEOs and business leaders gain clarity, strengthen
+            leadership, build exceptional teams, and create organizations
+            positioned for sustainable growth.
         </p>
 
-        <div class="location">
-            Santa Rosa Beach, Florida
+        <div class="actions">
+            <a class="button" href="#focus">Explore Coaching</a>
+            <a class="button secondary" href="mailto:hello@laurendouglass.com">
+                Get in Touch
+            </a>
         </div>
 
     </div>
-</div>
+
+</section>
+
+<section class="focus" id="focus">
+
+    <div class="focus-inner">
+
+        <div class="section-label">Executive Coaching</div>
+
+        <h2>Better leaders build better companies.</h2>
+
+        <div class="grid">
+
+            <div class="item">
+                <div class="number">01</div>
+                <h3>Leadership</h3>
+                <p>
+                    Strengthen decision-making, communication, accountability,
+                    and the leadership skills required at the highest level.
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="number">02</div>
+                <h3>Strategy</h3>
+                <p>
+                    Create clarity around priorities, challenges, opportunities,
+                    and the decisions that move an organization forward.
+                </p>
+            </div>
+
+            <div class="item">
+                <div class="number">03</div>
+                <h3>Growth</h3>
+                <p>
+                    Build strong teams, scalable systems, and an organization
+                    capable of growing beyond the founder or CEO.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <strong>Lauren Douglass · CEO Coach</strong>
+    <span>Santa Rosa Beach, Florida</span>
+</footer>
 
 </body>
 </html>
